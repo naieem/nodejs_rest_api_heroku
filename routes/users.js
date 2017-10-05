@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-
     req.body.itemId = generator.generate();
     res.json(req.body);
 });
