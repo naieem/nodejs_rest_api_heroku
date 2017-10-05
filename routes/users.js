@@ -8,6 +8,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     req.body.itemId = generator.generate();
+    if (req.body.name == 'supto') {
+        req.body.name = "hi this is from supto";
+    }
     res.json(req.body);
 });
 
